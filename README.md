@@ -9,7 +9,7 @@ Next, I apply PCA to create a synthetic vote space and agglomerative clustering 
 
 The [dendrogram](http://www.adammassachi.com/clusters/dendrogram.png) offers more insight into the clustering algorithm. Notably, Cruz (R-TX), Rubio (R-FL), Graham (R-SC), Kirk (R-IL), and Sanders (I-VT) are very dissimilar to other Senators because all missed many votes in election season. All except Kirk ran for president -- and Kirk lost reelection in a tough IL Senate race to then Rep. Tammy Duckworth. 
 
-We represent each senator as a vector with 502 binary elements, like this `Shumer = [0, 1, 1, 0, ...]`. 
+We represent each senator as a vector with 502 binary elements, something like this `Schumer = [0, 1, 1, 0, ...]`. 
 
 I show that we can correctly classify party affiliation with 100% accuracy using any subset of 20 senators as a training sample. This helps to confirm intuitions about the distance between Republican and Democratic voting records offered by the clustering analysis. 
 
