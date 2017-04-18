@@ -3,7 +3,7 @@ This repo contains the data, scripts, notebooks, and images used for a project e
 
 There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the results. 
 
-First, I explore the roll call data. The `all_bills.csv` dataset describes the 502 roll call votes, the total for both sessions. Missing votes by the senators are explored and dicussed [here](www.adammassachi.com/missing-votes) 
+First, I explore the roll call data. The `all_bills.csv` dataset describes the 502 roll call votes, the total for both sessions. Missing votes by the senators are explored and dicussed [here](www.adammassachi.com/missing-votes/) 
 
 Next, I use apply PCA to create a synthetic vote space and agglomerative clustering methods to reveal some of the underlying structure of senators' voting patters. The [clusters](http://www.adammassachi.com/clusters/) match exactly the natural party divide. 
 
