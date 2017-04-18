@@ -5,7 +5,7 @@ There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and com
 
 First, I explore the roll call data. The `all_bills.csv` dataset describes the 502 roll call votes, the total for both sessions. Missing votes by the senators are explored and dicussed [here](http://www.adammassachi.com/missing-votes/) 
 
-Next, I use apply PCA to create a synthetic vote space and agglomerative clustering methods to reveal some of the underlying structure of senators' voting patters. The [clusters](http://www.adammassachi.com/clusters/) match exactly the natural party divide. 
+Next, I apply PCA to create a synthetic vote space and agglomerative clustering methods to reveal some of the underlying structure of senators' voting patters. The [clusters](http://www.adammassachi.com/clusters/) match exactly the natural party divide. 
 
 The [dendrogram](http://www.adammassachi.com/clusters/dendrogram.png) offers more insight into the clustering algorithm. Notably, Cruz (R-TX), Rubio (R-FL), Graham (R-SC), Kirk (R-IL), and Sanders (I-VT) are very dissimilar to other Senators because all missed many votes in election season. All except Kirk ran for president -- and Kirk lost reelection in tough IL Senate race to then Rep. Tammy Duckworth. 
 
