@@ -1,0 +1,9 @@
+
+This dataset includes "79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa." The competition "challenges you to predict the final price of each home."
+At this point, we should start to think about what we know about housing prices, [Ames, Iowa](https://en.wikipedia.org/wiki/Ames,_Iowa), and what we might expect to see in this dataset. My instincts are that features like total square footage and year might play a role in the final price  of each home. Other aspects of the home, such as pools, fences, and zoning probably also influence the final price. We'll have a chance to explore the data and to supplmenent our instincts with machine learning and mathematics. 
+
+
+Each competition might [evaluate](https://www.kaggle.com/c/house-prices-advanced-regression-techniques#evaluation) the submissions differently. Similarly, there can be differences in  the structure of your submission  file. 
+
+In this challenge, we'll create a csv file that has onle column of Id's from the test data, and another column of predictions from our model. The Kaggle will calculate the [Root-Mean-Squared-Error](https://en.wikipedia.org/wiki/Root-mean-square_deviation) and rank our submission on the [Public Leaderboard](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/leaderboard). 
+
