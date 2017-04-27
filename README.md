@@ -1,7 +1,7 @@
 # HouseDivided
 This repo contains the data, scripts, notebooks, and images used for a project exploring voting behavior in the 114th United States Senate.
 
-There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the results. 
+There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. 
 
 First, I explore the roll call data. The `all_bills.csv` dataset describes the 502 roll call votes, the total for both sessions. Missing votes by the senators are explored and dicussed [here](http://www.adammassachi.com/missing-votes/) 
 
