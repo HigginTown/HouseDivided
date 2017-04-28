@@ -11,10 +11,10 @@ The data are comprised of a few major components.
  - `member_masterlist.pkl` is a pickle of a dictionary containing information on several US Senate Classes
 
 The `gallery` folder includes many of the images generated during this project. Some particular points of interest are:
- - [`dtc.png`](https://github.com/HigginTown/HouseDivided/blob/master/gallery/dtc.png) represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the Independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
- - `influence_rank.png` shows the normailzed influence of each senator by their rank. 
- - `dendrogram.png` offers insight into the agglomerative clustering process. 
- - `predictions_information.png` compares the strategies in the thought experiment detailed below. 
+ - [dtc.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/dtc.png) represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the Independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
+ - [influence_rank.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_rank.png) shows the normailzed influence of each senator by their rank. 
+ - [dendrogram.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/dendrogram.png) offers insight into the agglomerative clustering process. 
+ - [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/predictions_information.png) compares the strategies in the thought experiment detailed below. 
 
 Check out the README in the gallery folder for a complete list of image descriptions. 
 
