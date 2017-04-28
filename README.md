@@ -3,7 +3,7 @@ This repo contains the relevant files exploring voting behavior in the 114th Uni
 
 There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. 
 
-The data is comprised of three major components. 
+The data are comprised of a few major components. 
  - `votes.csv` includes 502 rows, each a particualr rolll call vote in the Senate. There are 101 columns, one for each senator and one for the final outcome. 
  - `cleaned_votes.csv` is numerical representation of `votes.csv`
  - `all_bills.csv` contains information on each vote and issue, such as the result, title, question type, etc. 
