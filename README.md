@@ -1,7 +1,7 @@
-# HouseDivided
+# House Divided
 This repo contains the relevant files exploring voting behavior in the 114th United States Senate.
 
-There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. Some of the inspiration for this project came from a [paper](http://www.stat.columbia.edu/~jakulin/Politics/) on the 2003 Senate. I have incldued their code in this project's repo, in the folder `senate-mining`, though I don't make use of any of it. 
+There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. 
 
 The data is comprised of three major components. 
  - `votes.csv` includes 502 rows, each a particualr rolll call vote in the Senate. There are 101 columns, one for each senator and one for the final outcome. 
@@ -55,3 +55,6 @@ I show that we can correctly classify party affiliation with 100% accuracy using
 Next, I introduce a distance metric derived from the measure of Mutual Information and entropy in information theory. The inspiration for this metric can be found in the `senate-mining` folder. 
 
 We take mutual information between the senator's voting record and the outcome to be 'influence', and rank the senators by how infleuntial they are. The metricized version of mutual information allows us to  calculate distances between each pair of senators. 
+
+
+Some of the inspiration for this project came from a [paper](http://www.stat.columbia.edu/~jakulin/Politics/) on the 2003 Senate. I have incldued their code in this project's repo, in the folder `senate-mining`, though I don't make use of any of it. 
