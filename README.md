@@ -17,16 +17,25 @@ The primary aims of this project include:
  - Predicting the party of a given senator given the voting record using decision trees to identify which issues are most important to party identity. 
  - Testing a thought experiment. 
 
- The thought experiment: 
- Predicting Outcomes
+### The thought experiment: 
 
- 
+Imagine that you are standing outside of the Senate Chamber, trying to discover the outcome of a roll call vote. The vote has just taken place. You walk into the Chamber and find all 100 senators have just voted. 
+
+The game: 
+
+You are allowed to ask 1 senator of your choice how they voted, and they will respond truthfully. 
+Then, you must guess whether the vote passed or was rejected. 
+
+So, who should you ask?
+
+The game can be altered to include any number `n` senators up to 100. Working backwards, it's obvious that if you could ask all 100 senators how they've voted, you could guess with 100% accuarcy the result of the vote. But, with `n < 100`, you must decisions about whom to include. 
+
+I show that a rank-ordered list of senators by our influence score is the best way to select `n` senators, e.g. If you can ask `n` senators, then selecting the first `n` senators on the ordered list outperforms all other choices. 
 
 
 
 
-
-First, I explore the roll call data. The `all_bills.csv` dataset describes the 502 roll call votes, the total for both sessions. Missing votes by the senators are explored and dicussed [here](http://www.adammassachi.com/missing-votes/) 
+First, I explore the roll call data. Missing votes by the senators are explored and dicussed [here](http://www.adammassachi.com/missing-votes/) 
 
 Next, I apply PCA to create a synthetic vote space and agglomerative clustering methods to reveal some of the underlying structure of senators' voting patterns. The [clusters](http://www.adammassachi.com/clusters/) match exactly the natural party divide. 
 
