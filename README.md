@@ -1,5 +1,5 @@
 # HouseDivided
-This repo contains the relvant files exploring voting behavior in the 114th United States Senate.
+This repo contains the relevant files exploring voting behavior in the 114th United States Senate.
 
 There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. Some of the inspiration for this project came from a [paper](http://www.stat.columbia.edu/~jakulin/Politics/) on the 2003 Senate. I have incldued their code in this project's repo, in the folder `senate-mining`, though I don't make use of any of it. 
 
