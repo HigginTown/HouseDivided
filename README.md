@@ -10,6 +10,14 @@ The data is comprised of three major components.
  - `senators114.csv` contains information on each senator, such as their seniority, number of missed votes, etc
  - `member_masterlist.pkl` is a pickle of a dictionary containing information on several US Senate Classes
 
+The `gallery` folder includes many of the images generated during this project. Some particular points of interest are:
+ - `dtc.png` represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
+ - `influence rank.png` shows the normailzed influence of each senator by their rank. 
+ - `predictions_information.png` compares the strategies in the thought experiment detailed below. 
+
+Check out the README in that folder for a complete list descriptions. 
+
+
 
 The primary aims of this project include:
  - Developing a mathematical model of influence in the senate to create an influence score for senators and a distance metric for the voting records (which are vectors like `Schumer = [0, 1, 1, 0, 1, 0, ...]`). I borrow many ideas and techniques from information thoery, inlcuding entropy, mutual information, and informaiton gain. 
