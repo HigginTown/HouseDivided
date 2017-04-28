@@ -15,6 +15,7 @@ The `gallery` folder includes many of the images generated during this project. 
  - [influence_rank.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_rank.png) shows the normailzed influence of each senator by their rank. 
  - [dendrogram.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/dendrogram.png) offers insight into the agglomerative clustering process. 
  - [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/predictions_information.png) compares the strategies in the thought experiment detailed below. 
+ - [influence_cumsum.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_cumsum.png) compares the growth in mutual informaion observed in the senate (`observed`) compared to hypothetical uniformally distributed influence scores.
 
 Check out the README in the gallery folder for a complete list of image descriptions. 
 
