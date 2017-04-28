@@ -1,5 +1,5 @@
 # HouseDivided
-This repo contains the data, scripts, notebooks, and images used for a project exploring voting behavior in the 114th United States Senate.
+This repo contains the relvant files exploring voting behavior in the 114th United States Senate.
 
 There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. Some of the inspiration for this project came from a [paper](http://www.stat.columbia.edu/~jakulin/Politics/) on the 2003 Senate. I have incldued their code in this project's repo, in the folder `senate-mining`, though I don't make use of any of it. 
 
@@ -21,18 +21,16 @@ The primary aims of this project include:
 
 Imagine that you are standing outside of the Senate Chamber, trying to discover the outcome of a roll call vote. The vote has just taken place. You walk into the Chamber and find all 100 senators have just voted. 
 
-The game: 
-
 You are allowed to ask 1 senator of your choice how they voted, and they will respond truthfully. 
 Then, you must guess whether the vote passed or was rejected. 
 
-So, who should you ask?
+**So, who should you ask?**
 
 The game can be altered to include any number `n` senators up to 100. Working backwards, it's obvious that if you could ask all 100 senators how they've voted, you could guess with 100% accuarcy the result of the vote. But, with `n < 100`, you must decisions about whom to include. 
 
 I show that a rank-ordered list of senators by our influence score is the best way to select `n` senators, e.g. If you can ask `n` senators, then selecting the first `n` senators on the ordered list outperforms all other choices. 
 
-
+### The strategy
 
 
 First, I explore the roll call data. Missing votes by the senators are explored and dicussed [here](http://www.adammassachi.com/missing-votes/) 
