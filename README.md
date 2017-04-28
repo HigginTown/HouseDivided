@@ -1,7 +1,30 @@
 # HouseDivided
 This repo contains the data, scripts, notebooks, and images used for a project exploring voting behavior in the 114th United States Senate.
 
-There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. 
+There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. Some of the inspiration for this project came from a [paper](http://www.stat.columbia.edu/~jakulin/Politics/) on the 2003 Senate. I have incldued their code in this project's repo, in the folder `senate-mining`, though I don't make use of any of it. 
+
+The data is comprised of three major components. 
+ - `votes.csv` includes 502 rows, each a particualr rolll call vote in the Senate. There are 101 columns, one for each senator and one for the final outcome. 
+ - `cleaned_votes.csv` is numerical representation of `votes.csv`
+ - `all_bills.csv` contains information on each vote and issue, such as the result, title, question type, etc. 
+ - `senators114.csv` contains information on each senator, such as their seniority, number of missed votes, etc
+ - `member_masterlist.pkl` is a pickle of a dictionary containing information on several US Senate Classes
+
+
+The primary aims of this project include:
+ - Developing a mathematical model of influence in the senate to create an influence score for senators and a distance metric for the voting records (which are vectors like `Schumer = [0, 1, 1, 0, 1, 0, ...]`). I borrow many ideas and techniques from information thoery, inlcuding entropy, mutual information, and informaiton gain. 
+ - Performing hierarchical clustering analysis with this metric to explore underlying groups of senators and influence. 
+ - Predicting the party of a given senator given the voting record using decision trees to identify which issues are most important to party identity. 
+ - Testing a thought experiment. 
+
+ The thought experiment: 
+ Predicting Outcomes
+
+ 
+
+
+
+
 
 First, I explore the roll call data. The `all_bills.csv` dataset describes the 502 roll call votes, the total for both sessions. Missing votes by the senators are explored and dicussed [here](http://www.adammassachi.com/missing-votes/) 
 
