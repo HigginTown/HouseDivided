@@ -11,7 +11,7 @@ The data are comprised of a few major components.
  - `member_masterlist.pkl` is a pickle of a dictionary containing information on several US Senate Classes
 
 The `gallery` folder includes many of the images generated during this project. Some particular points of interest are:
- - `dtc.png` represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the Independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
+ - [`dtc.png`](https://github.com/HigginTown/HouseDivided/blob/master/gallery/dtc.png) represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the Independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
  - `influence_rank.png` shows the normailzed influence of each senator by their rank. 
  - `dendrogram.png` offers insight into the agglomerative clustering process. 
  - `predictions_information.png` compares the strategies in the thought experiment detailed below. 
@@ -28,14 +28,14 @@ Check out the README in the gallery folder for a complete list of image descript
 
 ### The thought experiment: 
 
-Imagine that you are standing outside of the Senate Chamber, trying to discover the outcome of a roll call vote. The vote has just taken place. You walk into the Chamber and find all 100 senators have just voted. 
+Imagine that you are standing outside of the Senate Chamber, trying to discover the outcome of a roll call vote. The vote has just taken place. You walk into the chamber and find that all 100 senators have just voted. 
 
 You are allowed to ask 1 senator of your choice how they voted, and they will respond truthfully. 
 Then, you must guess whether the vote passed or was rejected. 
 
 **So, who should you ask?**
 
-The game can be altered to include any number `n` senators up to 100. Working backwards, it's obvious that if you could ask all 100 senators how they've voted, you could guess with 100% accuarcy the result of the vote. But, with `n < 100`, you must decisions about whom to include. 
+The game can be altered to include any number `n` senators up to 100. Working backwards, it's obvious that if you could ask all 100 senators how they've voted, you could guess with 100% accuarcy the result of the vote. But, with `n < 100`, you must make decisions about whom to include. 
 
 I show that a rank-ordered list of senators by our influence score is the best way to select `n` senators, e.g. If you can ask `n` senators, then selecting the first `n` senators on the ordered list outperforms all other choices. 
 
