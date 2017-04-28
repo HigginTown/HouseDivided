@@ -15,10 +15,9 @@ The `gallery` folder includes many of the images generated during this project. 
  - [influence_rank.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_rank.png) shows the normailzed influence of each senator by their rank. 
  - [dendrogram.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/dendrogram.png) offers insight into the agglomerative clustering process. 
  - [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/predictions_information.png) compares the strategies in the thought experiment detailed below. 
- - [influence_cumsum.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_cumsum.png) compares the growth in mutual informaion observed in the senate (`observed`) compared to hypothetical uniformally distributed influence scores.
+ - [influence_cumsum.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_cumsum.png) compares the growth in mutual informaion observed in the senate (`observed`) with hypothetical uniformally distributed influence scores.
 
 Check out the README in the gallery folder for a complete list of image descriptions. 
-
 
 
 ### The primary aims of this project include:
@@ -27,7 +26,8 @@ Check out the README in the gallery folder for a complete list of image descript
  - Predicting the party of a given senator given the voting record using decision trees to identify which issues are most important to party identity. 
  - Testing a thought experiment. 
 
-### The thought experiment: 
+
+### The thought experiment
 
 Imagine that you are standing outside of the Senate Chamber, trying to discover the outcome of a roll call vote. The vote has just taken place. You walk into the chamber and find that all 100 senators have just voted. 
 
@@ -42,8 +42,7 @@ I show that a rank-ordered list of senators by our influence score is the best w
 
 ### The strategy
 
-
-First, I explore the roll call data. Missing votes by the senators are explored and dicussed [here](http://www.adammassachi.com/missing-votes/) 
+First, I explore the roll call data and [missing votes](http://www.adammassachi.com/missing-votes/). 
 
 Next, I apply PCA to create a synthetic vote space and agglomerative clustering methods to reveal some of the underlying structure of senators' voting patterns. The [clusters](http://www.adammassachi.com/clusters/) match exactly the natural party divide. 
 
