@@ -12,16 +12,16 @@ The data are comprised of a few major components.
 
 The `gallery` folder includes many of the images generated during this project. Some particular points of interest are:
  - `dtc.png` represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the Independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
- - `influence rank.png` shows the normailzed influence of each senator by their rank. 
+ - `influence_rank.png` shows the normailzed influence of each senator by their rank. 
  - `dendrogram.png` offers insight into the agglomerative clustering process. 
  - `predictions_information.png` compares the strategies in the thought experiment detailed below. 
 
-Check out the README in the gallery folder for a complete list descriptions. 
+Check out the README in the gallery folder for a complete list of image descriptions. 
 
 
 
-The primary aims of this project include:
- - Developing a mathematical model of influence in the senate to create an influence score for senators and a distance metric for the voting records (which are vectors like `Schumer = [0, 1, 1, 0, 1, 0, ...]`). I borrow many ideas and techniques from information thoery, inlcuding entropy, mutual information, and informaiton gain. 
+### The primary aims of this project include:
+ - Developing a mathematical model of influence in the senate to create an influence score for senators and a distance metric for the voting records (represented as vectors like `Schumer = [0, 1, 1, 0, 1, 0, ...]`). I borrow many ideas and techniques from information theory, inlcuding entropy, mutual information, and informaiton gain. 
  - Performing hierarchical clustering analysis with this metric to explore underlying groups of senators and influence. 
  - Predicting the party of a given senator given the voting record using decision trees to identify which issues are most important to party identity. 
  - Testing a thought experiment. 
