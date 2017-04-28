@@ -4,19 +4,19 @@ This repo contains the relevant files exploring voting behavior in the 114th Uni
 There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. 
 
 The data are comprised of a few major components. 
- - `votes.csv` includes 502 rows, each a particualr rolll call vote in the Senate. There are 101 columns, one for each senator and one for the final outcome. 
+ - `votes.csv` includes 502 rows, each a particualr roll call vote in the Senate. There are 101 columns, one for each senator and one for the final outcome. 
  - `cleaned_votes.csv` is numerical representation of `votes.csv`
  - `all_bills.csv` contains information on each vote and issue, such as the result, title, question type, etc. 
  - `senators114.csv` contains information on each senator, such as their seniority, number of missed votes, etc
  - `member_masterlist.pkl` is a pickle of a dictionary containing information on several US Senate Classes
 
 The `gallery` folder includes many of the images generated during this project. Some particular points of interest are:
- - `dtc.png` represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
+ - `dtc.png` represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the Independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
  - `influence rank.png` shows the normailzed influence of each senator by their rank. 
  - `dendrogram.png` offers insight into the agglomerative clustering process. 
  - `predictions_information.png` compares the strategies in the thought experiment detailed below. 
 
-Check out the README in that folder for a complete list descriptions. 
+Check out the README in the gallery folder for a complete list descriptions. 
 
 
 
