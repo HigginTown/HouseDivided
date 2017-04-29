@@ -54,20 +54,15 @@ Check out the README in the gallery folder for a complete list of image descript
 
 ### The strategy
 
-First, I explore the roll call data and [missing votes](http://www.adammassachi.com/missing-votes/). 
+
+First, we need to get the data. Go to the `scripts` folder, and find `data_collection`. I use the [ProPublica Congress API](https://propublica.github.io/congress-api-docs/#congress-api-documentation) to get data on the senators, and I scrape the roll call votes on the[Congress website](https://www.congress.gov/roll-call-votes). 
+
+Second, I do some exploratory analysis on the roll call data and senators. Importantly, there are many [missing votes](http://www.adammassachi.com/missing-votes/) because a given senator does not vote on in every roll call. The `eda_prelim` notebook incldues this material. 
+
+Third, in the `pca_votes_clustering` notebook, I make some preliminary [clusters](http://www.adammassachi.com/clusters/). Using PCA with two components, I create a synthetic vote space and plot the coordinates of each senator. I compare the results of a simple KMeans clustering algorithm with `k=2` with the true party labels. The results are nearly identical, except that both Independent senators are missclassifed as democrats. 
 
 
-Next, I apply PCA to create a synthetic vote space and agglomerative clustering methods to reveal some of the underlying structure of senators' voting patterns. The [clusters](http://www.adammassachi.com/clusters/) match exactly the natural party divide. 
-
-The [dendrogram](http://www.adammassachi.com/clusters/dendrogram.png) offers more insight into the clustering algorithm. Notably, Cruz (R-TX), Rubio (R-FL), Graham (R-SC), Kirk (R-IL), and Sanders (I-VT) are very dissimilar to other Senators because all missed many votes in election season. All except Kirk ran for president -- and Kirk lost reelection in a tough IL Senate race to then Rep. Tammy Duckworth. 
-
-We represent each senator as a vector with 502 binary elements, something like this `Schumer = [0, 1, 1, 0, ...]`. 
-
-I show that we can correctly classify party affiliation with 100% accuracy using any subset of 20 senators as a training sample. This helps to confirm intuitions about the distance between Republican and Democratic voting records offered by the clustering analysis. 
-
-Next, I introduce a distance metric derived from the measure of Mutual Information and entropy in information theory. The inspiration for this metric can be found in the `senate-mining` folder. 
-
-We take mutual information between the senator's voting record and the outcome to be 'influence', and rank the senators by how infleuntial they are. The metricized version of mutual information allows us to  calculate distances between each pair of senators. 
 
 
 Some of the inspiration for this project came from a [paper](http://www.stat.columbia.edu/~jakulin/Politics/) on the 2003 Senate. I have incldued their code in this project's repo, in the folder `senate-mining`, though I don't make use of any of it. 
+
