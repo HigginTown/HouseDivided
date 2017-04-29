@@ -6,7 +6,7 @@ This repo contains the notebooks, images, and data for my project modelling voti
 - Developing a mathematical model of influence in the Senate to create an "influence score" for senators; creating a distance metric for the voting records (represented as vectors like `Schumer = [0, 1, 1, 0, 1, 0, ...]`). I borrow many ideas and techniques from information theory, inlcuding entropy, mutual information, and informaiton gain. The distance metric is a transformation of mutual information so that it is non negative, obeys the triangle inequality, etc. 
 
 - Performing hierarchical clustering analysis with this metric to explore underlying groups of senators and influence. 
-- Predicting the party of a given senator given the voting record using decision trees to identify which issues are most important to party identity. 
+- Predicting the party of a given senator given the voting record, using decision trees to identify which issues are most important to party identity. 
 - Testing a thought experiment. 
 
 
@@ -15,7 +15,7 @@ This repo contains the notebooks, images, and data for my project modelling voti
 Imagine that you are standing outside of the Senate Chamber, attempting to discover the outcome of a roll call vote. The vote has just taken place. You walk into the chamber and find that all 100 senators have just voted. 
 
 You are allowed to ask 1 senator of your choice how they voted, and they will respond truthfully. 
-Then, you must guess whether the vote was passed or was rejected. 
+Then, you must guess the outcome of the vote -- passed or rejected. 
 
 **So, who should you ask?**
 
@@ -24,10 +24,9 @@ The game can be altered to include any number `n` senators up to 100. Working ba
 I show that a rank-ordered list of senators by the "influence score" is the best way to select `n` senators, e.g. If you can ask `n` senators, then selecting the first `n` senators on the ordered list outperforms all other choices. See [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/predictions_information.png) in the gallery. 
 
 
-In this model, Senators can either influence one another or influence the final outcome of a vote. I model influence as an answer to one of the folllowing two questions:
- - For two senators A and B, how much does the voting behavior of A tell me about the voting behavior of B? This is the infleunce A has on B. 
- - Senators can also be influential on the outcome. How much does knowing the vote of A tell me about the final outcome of the vote? The more influential the senator, the more information we gain about the final vote outcome. 
-
+In this model, senators can either influence one another or influence the final outcome of a vote. I model influence as an answer to one of the folllowing two questions:
+ - For two senators Alice and Bob, how much does the voting behavior of Alice tell me about the voting behavior of Bob? This is the infleunce Alice has on Bob. 
+ - Senators can also be influential on the outcome. How much does knowing the vote of Alice tell me about the final outcome of the vote? The more influential the senator, the more information we gain about the final vote outcome. 
 
 There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. 
 
