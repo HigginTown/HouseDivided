@@ -12,11 +12,11 @@ The data are comprised of a few major components.
 
 The `gallery` folder includes many of the images generated during this project. Some particular points of interest are:
  - [The clusters](http://www.adammassachi.com/clusters/senate_divided.html) of senators in a synthetic vote space, just two axes. This matches the natural party divide seen in [these clusters](http://www.adammassachi.com/clusters/senate_divided_2.html). 
- - [dtc.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/dtc.png) represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the Independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
- - [influence_rank.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_rank.png) shows the normailzed influence of each senator by their rank. 
- - [dendrogram.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/dendrogram.png) offers insight into the agglomerative clustering process. 
- - [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/predictions_information.png) compares the strategies in the thought experiment detailed below. 
- - [influence_cumsum.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_cumsum.png) compares the growth in mutual informaion observed in the senate (`observed`) with hypothetical uniformally distributed influence scores.
+ - [dtc.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dtc.png) represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the Independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
+ - [influence_rank.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_rank.png) shows the normailzed influence of each senator by their rank. 
+ - [dendrogram.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dendrogram.png) offers insight into the agglomerative clustering process. 
+ - [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/predictions_information.png) compares the strategies in the thought experiment detailed below. 
+ - [influence_cumsum.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_cumsum.png) compares the growth in mutual informaion observed in the senate (`observed`) with hypothetical uniformally distributed influence scores.
 
 Check out the README in the gallery folder for a complete list of image descriptions. 
 
