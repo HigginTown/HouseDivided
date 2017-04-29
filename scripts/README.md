@@ -2,6 +2,7 @@
 
 This `scripts` folder contains scripts and notebooks which cover collecting the data, building the distance metric, clustering, prediction, and making graphs. 
 
+First, look at similarity_metric.
 
 `similarity_metric` develops the metric, calculates mutual information, does the clustering, and is generally the more mathematically focused notebook. 
 

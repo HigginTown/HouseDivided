@@ -55,11 +55,13 @@ Check out the README in the gallery folder for a complete list of image descript
 ### The strategy
 
 
-First, we need to get the data. Go to the `scripts` folder, and find `data_collection`. I use the [ProPublica Congress API](https://propublica.github.io/congress-api-docs/#congress-api-documentation) to get data on the senators, and I scrape the roll call votes on the[Congress website](https://www.congress.gov/roll-call-votes). 
+ - First, we need to get the data. Go to the `scripts` folder, and find `data_collection`. I use the [ProPublica Congress API](https://propublica.github.io/congress-api-docs/#congress-api-documentation) to get data on the senators, and I scrape the roll call votes on the [Congress website](https://www.congress.gov/roll-call-votes). 
 
-Second, I do some exploratory analysis on the roll call data and senators. Importantly, there are many [missing votes](http://www.adammassachi.com/missing-votes/) because a given senator does not vote on in every roll call. The `eda_prelim` notebook incldues this material. 
+ - Second, I do some exploratory analysis on the roll call data and senators. Importantly, there are many [missing votes](http://www.adammassachi.com/missing-votes/) because a given senator does not vote on in every roll call. The `eda_prelim` notebook incldues this material. 
 
-Third, in the `pca_votes_clustering` notebook, I make some preliminary [clusters](http://www.adammassachi.com/clusters/). Using PCA with two components, I create a synthetic vote space and plot the coordinates of each senator. I compare the results of a simple KMeans clustering algorithm with `k=2` with the true party labels. The results are nearly identical, except that both Independent senators are missclassifed as democrats. 
+ - Third, in the `pca_votes_clustering` notebook, I make some preliminary [clusters](http://www.adammassachi.com/clusters/). Using PCA with two components, I create a synthetic vote space and plot the coordinates of each senator. I compare the results of a simple KMeans clustering algorithm with `k=2` with the true party labels. The results are nearly identical, except that both Independent senators are missclassifed as democrats. 
+
+ - Fourth, I fit a [decision tree](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dtc.png) on 
 
 
 
