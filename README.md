@@ -29,6 +29,23 @@ In this model, senators can either influence one another or influence the final 
  - Senators can also be influential on the outcome. How much does knowing the vote of Alice tell me about the final outcome of the vote? The more influential the senator, the more information we gain about the final vote outcome. 
 
 
+
+### The strategy
+
+ - First, we need to get the data. Go to the `scripts` folder, and find `data_collection`. I use the [ProPublica Congress API](https://propublica.github.io/congress-api-docs/#congress-api-documentation) to get data on the senators, and I scrape the roll call votes on the [Congress website](https://www.congress.gov/roll-call-votes). 
+
+ - Second, I do some exploratory analysis on the roll call data and senators. Importantly, there are many [missing votes](http://www.adammassachi.com/missing-votes/) because a given senator does not vote on in every roll call. The `eda_prelim` notebook incldues this material. 
+
+ - Third, in the `pca_votes_clustering` notebook, I make some preliminary [clusters](http://www.adammassachi.com/clusters/). Using PCA with two components, I create a synthetic vote space and plot the coordinates of each senator. I compare the results of a simple KMeans clustering algorithm with `k=2` with the true party labels. The results are nearly identical, except that both Independent senators are missclassifed as democrats. 
+
+ - Fourth, I fit a [decision tree](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dtc.png) on the voting records and party labels, detailed below. Find this in the `predicting outcomes` notebook section "Decision Tree". 
+
+ - Fifth, we move to more math and modelling. In the `similarity_metric` notebook, I cover entropy, mutual information, and the distance metric. In our case, the nutual information metric is congruent to the Jaccard distance. In this notebook, I use agglomerative clustering with a distacne matrix calcualted using this metric. You can visualize the hierarchies in the [dendrogram.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dendrogram.png). I model "influence" as the mutual information between the senator and the outcome. This makes intuitive sense in terms of out motivating thought experiment -- we want to learn a ranking of senators such that information about the \# 1 ranked senator reduces uncertainty about the outcome the most compared to all other senators, and so on for each senator. [influence_rank.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_rank.png) shows the normailzed influence of each senator by their rank; [influence_cumsum.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_cumsum.png) compares the growth in mutual informaion observed in the senate (`observed`) with hypothetical uniformally distributed influence scores. 
+
+
+
+
+
  ### About this repo
 
 There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. 
@@ -39,29 +56,6 @@ The data are comprised of a few major components.
  - `all_bills.csv` contains information on each vote and issue, such as the result, title, question type, etc. 
  - `senators114.csv` contains information on each senator, such as their seniority, number of missed votes, etc
  - `member_masterlist.pkl` is a pickle of a dictionary containing information on several US Senate Classes
-
-The `gallery` folder includes many of the images generated during this project. Some particular points of interest are:
- - [The clusters](http://www.adammassachi.com/clusters/senate_divided.html) of senators in a synthetic vote space constructed with PCA, on two axes. This matches the natural party divide seen in [these clusters](http://www.adammassachi.com/clusters/senate_divided_2.html). 
- - [dtc.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dtc.png) represents a surpsringly simple decision tree fit on the roll call vote data with party label as the target variable. The tree requires just two splits to correctly map every senator to a party. The first split, `S. Con. Res 11` is a budget issue, where all Republicans voted differently from Independents and Democrats. Next the Independents differ from Democrats on `H.R. 1735`, a National Defense Authorization Act. 
- - [influence_rank.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_rank.png) shows the normailzed influence of each senator by their rank. 
- - [dendrogram.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dendrogram.png) offers insight into the agglomerative clustering process. 
- - [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/predictions_information.png) compares the strategies in the thought experiment detailed above. 
- - [influence_cumsum.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_cumsum.png) compares the growth in mutual informaion observed in the senate (`observed`) with hypothetical uniformally distributed influence scores.
-
-Check out the README in the gallery folder for a complete list of image descriptions. 
-
-
-
-### The strategy
-
-
- - First, we need to get the data. Go to the `scripts` folder, and find `data_collection`. I use the [ProPublica Congress API](https://propublica.github.io/congress-api-docs/#congress-api-documentation) to get data on the senators, and I scrape the roll call votes on the [Congress website](https://www.congress.gov/roll-call-votes). 
-
- - Second, I do some exploratory analysis on the roll call data and senators. Importantly, there are many [missing votes](http://www.adammassachi.com/missing-votes/) because a given senator does not vote on in every roll call. The `eda_prelim` notebook incldues this material. 
-
- - Third, in the `pca_votes_clustering` notebook, I make some preliminary [clusters](http://www.adammassachi.com/clusters/). Using PCA with two components, I create a synthetic vote space and plot the coordinates of each senator. I compare the results of a simple KMeans clustering algorithm with `k=2` with the true party labels. The results are nearly identical, except that both Independent senators are missclassifed as democrats. 
-
- - Fourth, I fit a [decision tree](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dtc.png) on 
 
 
 
