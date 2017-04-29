@@ -1,7 +1,7 @@
 THESE ARE FILES FROM A [DIFFERENT PROJECT](http://www.stat.columbia.edu/~jakulin/Politics/)
 
 Above is the 2003 Project which inspired my current analysis. My methods are different and make use of many contemporary tools and libraries. Further, they do not attempt to answer some of the same questions as I do in this project. 
-Nonetheless, I followed their conceptual lead on building out the distance metric and, roughly, the cliustering process. 
+Nonetheless, I followed their conceptual lead on building out the distance metric and, roughly, the clustering process. 
 
 
 To run their scripts, you will need:

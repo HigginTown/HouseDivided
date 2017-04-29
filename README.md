@@ -2,7 +2,7 @@
 This repo contains the notebooks, images, and data for my project modelling voting behavior in the 114th United States Senate. Intially, I was motivated by a thought experiment I detail below, but this grew to include other analyses as well. I hope you enjoy the interesting results! 
 
 
-### The primary aims of this project include:
+### The primary aims of this project include
 - Developing a mathematical model of influence in the Senate to create an "influence score" for senators; creating a distance metric for the voting records (represented as vectors like `Schumer = [0, 1, 1, 0, 1, 0, ...]`). I borrow many ideas and techniques from information theory, inlcuding entropy, mutual information, and informaiton gain. The distance metric is a transformation of mutual information so that it is non negative, obeys the triangle inequality, etc. 
 
 - Performing hierarchical clustering analysis with this metric to explore underlying groups of senators and influence. 
