@@ -50,6 +50,10 @@ Other motivating questions for the project include
 
   - Now that we have an influence ranking, we can finally begin to simulate the thought experiment. [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/predictions_information.png) compares the strategies in the thought experiment detailed above. The strategy is a straightforward, iterative process. 
 
+  Consider the following: 
+
+  We will compare two strategies (plans) for simulating the thought experiment. 
+
   In order to justify that that the rank-ordered list by our influence score is the best way to select senators, we need, at least, Plan 1 to perform better than Plan 2:
 
   For both plans, we will fit a model using a subset of senators of size `n`, starting with `n = 1`, as the features, and the final outcome as the target. Then we plot the accuracy given the number of senators included for `n` in the interval `[1,100]`. The different plans describe the order in which we add senators to the model features. My hypothesis is that the influence score rank order is optimal. 
@@ -61,7 +65,7 @@ Other motivating questions for the project include
   It turns out that the influence score ranking **is** the best way to select `n` senators. This is an experimental result, but I am confident that we can construct a rigorous, mathematical proof of this hypothesis. The proof is left as an exercise to the reader. 
 
 
- ### About this repo
+ ### Additional about this repo
 
 There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. 
 
