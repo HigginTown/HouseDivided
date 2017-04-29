@@ -1,0 +1,10 @@
+# What's the script?
+
+This folder contains
+
+ - `data_collection` contains two notebooks. 
+
+  >> `api-calls` includes the API requests I made to the ProPublica API to gather information on each senate class. 
+  >> `congress_scrape` incldues the XML scraping I did on the Congressional website, as well as some repackaging and cleaning of the data generally. 
+
+ - 
