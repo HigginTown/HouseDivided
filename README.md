@@ -3,7 +3,7 @@ This repo contains the notebooks, images, and data for my project modelling voti
 
 
 ### The primary aims of this project include
-- Developing a mathematical model of influence in the Senate to create an "influence score" for senators; creating a distance metric for the voting records (represented as vectors like `Schumer = [0, 1, 1, 0, 1, 0, ...]`). I borrow many ideas and techniques from information theory, inlcuding entropy, mutual information, and informaiton gain. The distance metric is a transformation of mutual information so that it is non negative, obeys the triangle inequality, etc. 
+- Developing a mathematical model of influence in the Senate to create an "influence score" for senators; creating a distance metric for the voting records (represented as vectors like `Schumer = [0, 1, 1, 0, 1, 0, ...]`). I borrow many ideas and techniques from information theory, inlcuding entropy, mutual information, and informaiton gain. The distance metric is a transformation of mutual information so that it is non-negative, obeys the triangle inequality, etc. 
 
 - Performing hierarchical clustering analysis with this metric to explore underlying groups of senators and influence. 
 - Predicting the party of a given senator given the voting record, using decision trees to identify which issues are most important to party identity. 
@@ -28,6 +28,10 @@ In this model, senators can either influence one another or influence the final 
  - For two senators Alice and Bob, how much does the voting behavior of Alice tell me about the voting behavior of Bob? This is the infleunce Alice has on Bob. 
  - Senators can also be influential on the outcome. How much does knowing the vote of Alice tell me about the final outcome of the vote? The more influential the senator, the more information we gain about the final vote outcome. 
 
+Other motivating questions for the project include
+ - Can we find a minimal subset of senators such that knowledge of their votes reuslts in 0 uncerainty about the outcome of a final vote? 
+ - Can we find a minimal subset of senators such that knowlege of their party label and voting bevior allows us to predict with 100% accuracy the party label of an unknown senator with a given voting record? 
+
 
 
 ### The strategy
@@ -40,7 +44,9 @@ In this model, senators can either influence one another or influence the final 
 
  - Fourth, I fit a [decision tree](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dtc.png) on the voting records and party labels, detailed below. Find this in the `predicting outcomes` notebook section "Decision Tree". 
 
- - Fifth, we move to more math and modelling. In the `similarity_metric` notebook, I cover entropy, mutual information, and the distance metric. In our case, the nutual information metric is congruent to the Jaccard distance. In this notebook, I use agglomerative clustering with a distacne matrix calcualted using this metric. You can visualize the hierarchies in the [dendrogram.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dendrogram.png). I model "influence" as the mutual information between the senator and the outcome. This makes intuitive sense in terms of out motivating thought experiment -- we want to learn a ranking of senators such that information about the \# 1 ranked senator reduces uncertainty about the outcome the most compared to all other senators, and so on for each senator. [influence_rank.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_rank.png) shows the normailzed influence of each senator by their rank; [influence_cumsum.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_cumsum.png) compares the growth in mutual informaion observed in the senate (`observed`) with hypothetical uniformally distributed influence scores. 
+ - Fifth, we move to more math and modelling. In the `similarity_metric` notebook, I cover entropy, mutual information, and the distance metric. In our case, the nutual information metric is congruent to the Jaccard distance. In this notebook, I use agglomerative clustering with a distacne matrix calcualted using this metric. You can visualize the hierarchies in the [dendrogram.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/cluster_correlation/dendrogram.png). I model "influence" as the mutual information between the senator and the outcome. This makes intuitive sense in terms of out motivating thought experiment -- we want to learn a ranking of senators such that information about the \# 1 ranked senator reduces uncertainty about the outcome the most compared to all other senators, and so on for each senator. 
+
+  - Sixth, go to `predicting_outcomes`. In this notebook, you can find [influence_rank.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_rank.png) shows the normailzed influence of each senator by their rank; and [influence_cumsum.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_cumsum.png) compares the growth in mutual informaion observed in the senate (`observed`) with hypothetical uniformally distributed influence scores. 
 
 
 
