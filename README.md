@@ -28,6 +28,9 @@ In this model, senators can either influence one another or influence the final 
  - For two senators Alice and Bob, how much does the voting behavior of Alice tell me about the voting behavior of Bob? This is the infleunce Alice has on Bob. 
  - Senators can also be influential on the outcome. How much does knowing the vote of Alice tell me about the final outcome of the vote? The more influential the senator, the more information we gain about the final vote outcome. 
 
+
+ ### About this repo
+
 There is a [blog](http://www.adammassachi.com/senate-114/) with analysis and commentary on the preliminary results. 
 
 The data are comprised of a few major components. 
@@ -52,6 +55,7 @@ Check out the README in the gallery folder for a complete list of image descript
 ### The strategy
 
 First, I explore the roll call data and [missing votes](http://www.adammassachi.com/missing-votes/). 
+
 
 Next, I apply PCA to create a synthetic vote space and agglomerative clustering methods to reveal some of the underlying structure of senators' voting patterns. The [clusters](http://www.adammassachi.com/clusters/) match exactly the natural party divide. 
 
