@@ -21,7 +21,7 @@ Then, you must guess the outcome of the vote -- passed or rejected.
 
 The game can be altered to include any number `n` senators up to 100. Working backwards, it's obvious that if you could ask all 100 senators how they've voted, you could guess with 100% accuracy the result of the vote. But, with `n < 100`, you must make decisions about whom to include. 
 
-I show that a rank-ordered list of senators by the "influence score" is the best way to select `n` senators, e.g. If you can ask `n` senators, then selecting the first `n` senators on the ordered list outperforms all other choices. See [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/predictions_information.png) in the gallery. 
+I show that a rank-ordered list of senators by the "influence score" is the best way to select `n` senators, e.g. If you can ask `n` senators, then selecting the first `n` senators on the ordered list outperforms all other choices. See [predictions_information.png](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/predictions_information_reverse.png) in the gallery. 
 
 
 In this model, senators can either influence one another or influence the final outcome of a vote. I model influence as an answer to one of the following two questions:
