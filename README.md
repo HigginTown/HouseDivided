@@ -40,7 +40,7 @@ Other motivating questions for the project include
 
 ![the_issues](https://github.com/HigginTown/HouseDivided/blob/master/gallery/roll_call_bills/bills_mapped.png)
 
-![popular days](https://github.com/HigginTown/HouseDivided/blob/master/gallery/roll_call_bills/popular_days.png)
+![popular_days](https://github.com/HigginTown/HouseDivided/blob/master/gallery/roll_call_bills/popular_days.png)
 
  - First, we need to get the data. Go to the `scripts` folder, and find `data_collection`. I use the [ProPublica Congress API](https://propublica.github.io/congress-api-docs/#congress-api-documentation) to get data on the senators, and I scrape the roll call votes on the [Congress website](https://www.congress.gov/roll-call-votes). 
 
