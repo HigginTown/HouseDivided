@@ -1,6 +1,8 @@
 # House Divided
 This repo contains the notebooks, images, and data for my project modeling voting behavior in the 114th United States Senate. Initially, I was motivated by a thought experiment I detail below, but this grew to include other analyses as well. I hope you enjoy the interesting results! 
 
+![influence](https://github.com/HigginTown/HouseDivided/blob/master/gallery/influence_predictions/influence_map.png)
+
 
 ### The primary aims of this project include
 - Developing a mathematical model of influence in the Senate to create an "influence score" for senators; creating a distance metric for the voting records (represented as vectors like `Schumer = [0, 1, 1, 0, 1, 0, ...]`). I borrow many ideas and techniques from information theory, inlcuding entropy, mutual information, and information gain. The distance metric is a transformation of mutual information so that it is non-negative, obeys the triangle inequality, etc. 
