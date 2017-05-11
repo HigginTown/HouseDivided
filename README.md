@@ -38,6 +38,8 @@ Other motivating questions for the project include
 
 ![the_issues](https://github.com/HigginTown/HouseDivided/blob/master/gallery/roll_call_bills/bills_mapped.png)
 
+![popular days](https://github.com/HigginTown/HouseDivided/blob/master/gallery/roll_call_bills/popular_days.png)
+
  - First, we need to get the data. Go to the `scripts` folder, and find `data_collection`. I use the [ProPublica Congress API](https://propublica.github.io/congress-api-docs/#congress-api-documentation) to get data on the senators, and I scrape the roll call votes on the [Congress website](https://www.congress.gov/roll-call-votes). 
 
  - Second, I do some exploratory analysis on the roll call data and senators. Importantly, there are many [missing votes](http://www.adammassachi.com/missing-votes/) because a given senator does not vote in every roll call. The `eda_prelim` notebook incldues this material. 
